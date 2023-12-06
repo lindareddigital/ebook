@@ -5,56 +5,73 @@
         <title>home</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/x-icon" href="../layout/assets/icons/ico_logo.ico" />
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
 
+        <link href="./css/bootstrap.min.css" rel="stylesheet">
         <link href="./css/all.css" rel="stylesheet">
 
-        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
-
         <script src="../js/jquery-3.6.0.min.js"></script>
-        <script src="../js/bootstrap.min.js"></script>
+        <script src="./js/bootstrap.min.js"></script>
         <script src="../js/swiper-bundle.min.js"></script>
         <script src="../js/cusAnimation.min.js"></script>
         <script src="../js/main.js"></script>
+        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> -->
     </head>
 
     <body class="home-page">
 
-        <div class="header-main">
-          <div class="">
-            <img class="logo" src="./images/logo.jpeg" alt="">
+      <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Navbar</a>
+          <a href="/member" class="span align-items-center icon-fa-user-circle icon face-icon face-icon-white" title="" target="_self" aria-label="會員中心"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Pricing</a>
+              </li>
+            </ul>
           </div>
+        </div>
+      </nav>
 
+        <div class="container-fluid header-main">
 
           <div class="header-search-bar">
-            <div class="label-group">
-              <div class="">海濱</div>
-              <div class="">一丁</div>
-
-            </div>
-            <form class="input-group">
-              <input class="form-control header-search-input" type="text">
-              <button class=" mx-0 px-0" type="submit" >
-                <i class="icon-fa-search"></i>
-              </button>
-            </form>
-            <div class="keyword-block">
-              <a href="">全站滿額現折</a>
-              <a href="">斜槓文具5折起</a>
-              <a href="">下單抽香奈兒</a>
-              <a href=""></a>
-
+            <img class="logo" src="./images/logo.jpeg" alt="">
+            <div class="">
+              <div class="label-group">
+                <button type="button" class="btn btn-outline-secondary">海濱</button>
+                <button type="button" class="btn btn-outline-secondary">一丁</button>
+              </div>
+              <form class="input-group">
+                <input class="form-control header-search-input" type="text">
+                <button class="search-btn btn" type="submit" >
+                  <img src="https://api.iconify.design/fa:search.svg" alt="">
+                </button>
+              </form>
+              <div class="keyword-block">
+                <a href="">全站滿額現折</a>
+                <a href="">斜槓文具5折起</a>
+                <a href="">下單抽香奈兒</a>
+                <a href=""></a>
+              </div>
             </div>
           </div>            
 
           <div class="header-toolbar">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 102 78" width="50" height="50" preserveAspectRatio="xMidYMid meet" style="width: 100%; height: 100%; transform: translate3d(0px, 0px, 0px); content-visibility: visible;"><defs><text font-family="Noto Sans T Chinese" font-style="normal" font-weight="700" style="font-size: 100px; font-family: &quot;Noto Sans T Chinese&quot;;">0</text><clipPath id="__lottie_element_2"><rect width="102" height="78" x="0" y="0"></rect></clipPath></defs><g clip-path="url(#__lottie_element_2)"><g style="display: none;"><g><path></path><path stroke-linecap="butt" stroke-linejoin="round" fill-opacity="0"></path></g></g><g transform="matrix(1.1951299905776978,0,0,1.1951299905776978,56.99105453491211,53.81755065917969)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,0.10199999809265137,0.17599999904632568)"><path fill="rgb(51,51,51)" fill-opacity="1" d=" M-19.53499984741211,-18.524999618530273 C-19.53499984741211,-18.524999618530273 -19.535999298095703,-18.52899932861328 -19.535999298095703,-18.52899932861328 C-19.486000061035156,-18.5310001373291 -19.437000274658203,-18.5310001373291 -19.386999130249023,-18.52899932861328 C-19.336999893188477,-18.5310001373291 -19.285999298095703,-18.5310001373291 -19.236000061035156,-18.52899932861328 C-19.18600082397461,-18.5310001373291 -19.13599967956543,-18.5310001373291 -19.086000442504883,-18.52899932861328 C-19.086000442504883,-18.52899932861328 -14.100000381469727,-18.52899932861328 -14.100000381469727,-18.52899932861328 C-13.371999740600586,-18.52899932861328 -12.736000061035156,-18.03700065612793 -12.553999900817871,-17.332000732421875 C-12.553999900817871,-17.332000732421875 -11.008000373840332,-12.371999740600586 -11.008000373840332,-12.371999740600586 C-11.008000373840332,-12.371999740600586 22.45400047302246,-12.371999740600586 22.45400047302246,-12.371999740600586 C22.611000061035156,-12.373000144958496 22.767000198364258,-12.35099983215332 22.91699981689453,-12.307000160217285 C23.76300048828125,-12.059000015258789 24.24799919128418,-11.17300033569336 24,-10.32699966430664 C24,-10.32699966430664 19.062999725341797,7.751999855041504 19.062999725341797,7.751999855041504 C18.881000518798828,8.456999778747559 18.2450008392334,8.949000358581543 17.517000198364258,8.949000358581543 C17.517000198364258,8.949000358581543 -5.2729997634887695,8.949000358581543 -5.2729997634887695,8.949000358581543 C-5.2729997634887695,8.949000358581543 -5.046000003814697,9.74899959564209 -5.046000003814697,9.74899959564209 C-5.046000003814697,9.74899959564209 -4.817999839782715,11.342000007629395 -6.156000137329102,11.661999702453613 C-7.546000003814697,11.994000434875488 -8.17199993133545,10.364999771118164 -8.189000129699707,10.29699993133545 C-8.189000129699707,10.29699993133545 -8.814000129699707,8.050999641418457 -8.814000129699707,8.050999641418457 C-8.857000350952148,7.954999923706055 -8.890999794006348,7.855000019073486 -8.914999961853027,7.751999855041504 C-8.914999961853027,7.751999855041504 -13.652000427246094,-9.352999687194824 -13.652000427246094,-9.352999687194824 C-13.670999526977539,-9.402000427246094 -13.687000274658203,-9.451000213623047 -13.701000213623047,-9.50100040435791 C-13.744000434875488,-9.597000122070312 -13.777999877929688,-9.697999954223633 -13.800999641418457,-9.800999641418457 C-13.800999641418457,-9.800999641418457 -13.800999641418457,-9.85099983215332 -13.800999641418457,-9.85099983215332 C-13.819999694824219,-9.89900016784668 -13.836000442504883,-9.947999954223633 -13.850000381469727,-9.998000144958496 C-13.850000381469727,-9.998000144958496 -15.04699993133545,-14.236000061035156 -15.04699993133545,-14.236000061035156 C-15.04699993133545,-14.236000061035156 -15.345999717712402,-15.333999633789062 -15.345999717712402,-15.333999633789062 C-15.345999717712402,-15.333999633789062 -19.086000442504883,-15.333999633789062 -19.086000442504883,-15.333999633789062 C-19.0939998626709,-15.333000183105469 -19.101999282836914,-15.331000328063965 -19.110000610351562,-15.329999923706055 C-19.992000579833984,-15.213000297546387 -20.80299949645996,-15.833000183105469 -20.920000076293945,-16.71500015258789 C-21.03700065612793,-17.597000122070312 -20.41699981689453,-18.408000946044922 -19.53499984741211,-18.524999618530273z"></path></g></g><g transform="matrix(1.1951299905776978,0,0,1.1951299905776978,56.990623474121094,53.817161560058594)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,0,-0.5)"><path fill="rgb(51,51,51)" fill-opacity="1" d=" M-8.071000099182129,10.829999923706055 C-8.04699993133545,10.932999610900879 -7.767000198364258,11.890999794006348 -7.767000198364258,11.890999794006348 C-9.265000343322754,12.664999961853027 -10.3100004196167,14.197999954223633 -10.3100004196167,15.979999542236328 C-10.3100004196167,18.514999389648438 -8.206999778747559,20.56800079345703 -5.671999931335449,20.56800079345703 C-3.13700008392334,20.56800079345703 -1.0839999914169312,18.514999389648438 -1.0839999914169312,15.979999542236328 C-1.0839999914169312,15.468000411987305 -1.2300000190734863,14.996999740600586 -1.3839999437332153,14.534000396728516 C-1.3839999437332153,14.534000396728516 9.737000465393066,14.534000396728516 9.737000465393066,14.534000396728516 C9.581000328063965,14.996000289916992 9.48799991607666,15.470000267028809 9.48799991607666,15.979999542236328 C9.48799991607666,18.514999389648438 11.59000015258789,20.56800079345703 14.125,20.56800079345703 C16.659000396728516,20.56800079345703 18.71299934387207,18.514999389648438 18.71299934387207,15.979999542236328 C18.71299934387207,13.446000099182129 16.659000396728516,11.342000007629395 14.125,11.342000007629395 C14.109000205993652,11.342000007629395 14.092000007629395,11.342000007629395 14.076000213623047,11.342000007629395 C14.076000213623047,11.342000007629395 -4.625,11.342000007629395 -4.625,11.342000007629395 C-4.625,11.342000007629395 -5.1479997634887695,10.402000427246094 -5.1479997634887695,10.402000427246094 C-5.1479997634887695,10.402000427246094 -5.702000141143799,8.727999687194824 -7.047999858856201,9.01099967956543 C-8.229000091552734,9.258999824523926 -8.071000099182129,10.829999923706055 -8.071000099182129,10.829999923706055z M-5.821000099182129,14.536999702453613 C-5.821000099182129,14.536999702453613 -5.671000003814697,14.536999702453613 -5.671000003814697,14.536999702453613 C-4.861000061035156,14.536999702453613 -4.275000095367432,15.17300033569336 -4.275000095367432,15.982999801635742 C-4.275000095367432,16.792999267578125 -4.861000061035156,17.3799991607666 -5.671000003814697,17.3799991607666 C-6.480999946594238,17.3799991607666 -7.117000102996826,16.792999267578125 -7.117000102996826,15.982999801635742 C-7.117000102996826,15.222999572753906 -6.559999942779541,14.607999801635742 -5.821000099182129,14.536999702453613 C-5.821000099182129,14.536999702453613 -5.821000099182129,14.536999702453613 -5.821000099182129,14.536999702453613z M14.076000213623047,14.536999702453613 C14.092000007629395,14.536999702453613 14.109999656677246,14.536999702453613 14.12600040435791,14.536999702453613 C14.9350004196167,14.536999702453613 15.522000312805176,15.17300033569336 15.522000312805176,15.982999801635742 C15.522000312805176,16.792999267578125 14.9350004196167,17.3799991607666 14.12600040435791,17.3799991607666 C13.315999984741211,17.3799991607666 12.678999900817871,16.792999267578125 12.678999900817871,15.982999801635742 C12.678999900817871,15.1899995803833 13.289999961853027,14.562000274658203 14.076000213623047,14.536999702453613 C14.076000213623047,14.536999702453613 14.076000213623047,14.536999702453613 14.076000213623047,14.536999702453613z"></path></g></g><g transform="matrix(0,0,0,0,83.3219985961914,32.01100158691406)" opacity="1" style="display: block;"><g opacity="1" transform="matrix(1,0,0,1,48.5,-43.5)"><path fill="rgb(167,33,47)" fill-opacity="1" d=" M0,-22.5 C12.417750358581543,-22.5 22.5,-12.417750358581543 22.5,0 C22.5,12.417750358581543 12.417750358581543,22.5 0,22.5 C-12.417750358581543,22.5 -22.5,12.417750358581543 -22.5,0 C-22.5,-12.417750358581543 -12.417750358581543,-22.5 0,-22.5z"></path><path stroke-linecap="butt" stroke-linejoin="miter" fill-opacity="0" stroke-miterlimit="4" stroke="rgb(255,255,255)" stroke-opacity="1" stroke-width="3" d=" M0,-22.5 C12.417750358581543,-22.5 22.5,-12.417750358581543 22.5,0 C22.5,12.417750358581543 12.417750358581543,22.5 0,22.5 C-12.417750358581543,22.5 -22.5,12.417750358581543 -22.5,0 C-22.5,-12.417750358581543 -12.417750358581543,-22.5 0,-22.5z"></path></g></g><g fill="rgb(255,255,255)" font-size="35" font-family="Noto Sans T Chinese" font-style="normal" font-weight="700" aria-label="5" style="display: none;"><text text-anchor="middle" letter-spacing="-0.7350000000000001"><tspan x="0" y="0" style="display: inherit;">5</tspan></text></g></g></svg>
+            <button type="button" class="btn ">登入</button>
+            <button type="button" class="btn">註冊</button>  
           </div>
-          <div class="">登入</div>
-          <div class="">註冊</div>
+         
 
         </div>
 
@@ -74,30 +91,19 @@
 
         <div class="home-banner">
 
-          <div class="news">
-
-
-            <div class="title">最新消息</div>
-
-            <p>
-            .X萬獸探險隊特別篇5
-            11/15即將上市
-            .入選誠品TOP100書單
-            .X萬獸探險隊 算數王之
-            戰 遊戲玩法</p>
-          </div>
+          
 
 
           <div id="carouselExampleControls" class="home-banner-carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
-                <img src="https://s2.eslite.dev/unsafe/s.eslite.dev/n6kaa9thwzq1nj596yhrmonjdb92" class="d-block w-100" alt="...">
+                <img src="https://s2.eslite.dev/unsafe/s.eslite.dev/74p9gq3bb9f5wyp07bn3dubpq3lv" class="d-block w-100" alt="...">
               </div>
               <div class="carousel-item">
                 <img src="https://s2.eslite.dev/unsafe/s.eslite.dev/i7u8qihvmdg6ozohzfaev98paxb5" class="d-block w-100" alt="...">
               </div>
               <div class="carousel-item">
-                <img src="https://s2.eslite.dev/unsafe/s.eslite.dev/n6kaa9thwzq1nj596yhrmonjdb92" class="d-block w-100" alt="...">
+                <img src="https://s2.eslite.dev/unsafe/s.eslite.dev/74p9gq3bb9f5wyp07bn3dubpq3lv" class="d-block w-100" alt="...">
               </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -112,117 +118,144 @@
 
         </div>
 
+        <div class="container-fluid" >
+          <div class="main-body">
 
-        <div class="right-side">
-          <div id="Controls" class="booklist-carousel slide" data-bs-ride="carousel">
-            <div class="title">新品推薦</div>
-            <hr>
-            <div class="booklist-carousel-inner">
-              <div class="book-item">
-                <img src="https://s2.eslite.dev/unsafe/s.eslite.dev/b2b/newItem/2023/11/29/225_142846839_632_mainCoverImage1.jpg" class="" alt="...">
-                <div class="desc mt-2">【8項練習洞察心理】重新思考面對衝突的方式</div>
+
+
+          <aside class="list-aside">
+            <ul>
+              <li>
+                <a href="">雜誌嚴選</a>
+              </li>
+              <li>
+                <a href="">重點新刊</a>
+              </li>
+              <li>
+                <a href="">焦點話題</a>
+              </li>
+              <li>
+                <a href="">美妝贈品</a>
+              </li>
+            </ul>
+          </aside>
+
+
+          <div class="right-side">
+            <div id="Controls" class="booklist-carousel slide" data-bs-ride="carousel">
+              <div class="title">新品推薦</div>
+              <hr>
+              <div class="booklist-carousel-inner">
+                <div class="book-item">
+                  <img src="https://s2.eslite.dev/unsafe/s.eslite.dev/b2b/newItem/2023/11/29/225_142846839_632_mainCoverImage1.jpg" class="" alt="...">
+                  <div class="desc mt-2">【8項練習洞察心理】重新思考面對衝突的方式</div>
+                </div>
+                <div class="book-item">
+                  <img src="https://s2.eslite.dev/unsafe/s.eslite.dev/b2b/vendor/12_220231122172115/mainCoverImage1_1183119.jpg" class="" alt="...">
+                  <div class="desc">【8項練習洞察心理】重新思考面對衝突的方式</div>
+                </div>
+                <div class="book-item">
+                  <img src="https://s2.eslite.dev/unsafe/s.eslite.dev/b2b/newItem/2023/12/01/288_133650440_200_mainCoverImage1.jpg" class="" alt="...">
+                  <div class="desc">【8項練習洞察心理】重新思考面對衝突的方式</div>
+                </div>
+                <div class="book-item">
+                  <img src="https://s2.eslite.dev/unsafe/s.eslite.dev/b2b/vendor/112420231109111238/mainCoverImage1_1176964.jpg" class="" alt="...">
+                  <div class="desc">【8項練習洞察心理】重新思考面對衝突的方式</div>
+                </div>
+                <div class="book-item">
+                  <img src="https://s2.eslite.dev/unsafe/s.eslite.dev/b2b/newItem/2023/12/01/288_133650440_200_mainCoverImage1.jpg" class="" alt="...">
+                  <div class="desc">【8項練習洞察心理】重新思考面對衝突的方式</div>
+                </div>      
               </div>
-              <div class="book-item">
-                <img src="https://s2.eslite.dev/unsafe/s.eslite.dev/b2b/vendor/12_220231122172115/mainCoverImage1_1183119.jpg" class="" alt="...">
-                <div class="desc">【8項練習洞察心理】重新思考面對衝突的方式</div>
-              </div>
-              <div class="book-item">
-                <img src="https://s2.eslite.dev/unsafe/s.eslite.dev/b2b/newItem/2023/12/01/288_133650440_200_mainCoverImage1.jpg" class="" alt="...">
-                <div class="desc">【8項練習洞察心理】重新思考面對衝突的方式</div>
-              </div>
-              <div class="book-item">
-                <img src="https://s2.eslite.dev/unsafe/s.eslite.dev/b2b/vendor/112420231109111238/mainCoverImage1_1176964.jpg" class="" alt="...">
-                <div class="desc">【8項練習洞察心理】重新思考面對衝突的方式</div>
-              </div>
-              <div class="book-item">
-                <img src="https://s2.eslite.dev/unsafe/s.eslite.dev/b2b/newItem/2023/12/01/288_133650440_200_mainCoverImage1.jpg" class="" alt="...">
-                <div class="desc">【8項練習洞察心理】重新思考面對衝突的方式</div>
-              </div>      
+              <button class="carousel-control-prev" type="button" data-bs-target="#Controls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#Controls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#Controls" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#Controls" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
+
+            <div id="Controls" class="booklist-carousel slide" data-bs-ride="carousel">
+              <div class="title">新品推薦</div>
+              <hr>
+              <div class="booklist-carousel-inner">
+                <div class="book-item">
+                  <img src="https://s2.eslite.dev/unsafe/s.eslite.dev/b2b/newItem/2023/11/29/225_142846839_632_mainCoverImage1.jpg" class="" alt="...">
+                  <div class="desc">【8項練習洞察心理】重新思考面對衝突的方式</div>
+                </div>
+                <div class="book-item">
+                  <img src="https://s2.eslite.dev/unsafe/s.eslite.dev/b2b/vendor/12_220231122172115/mainCoverImage1_1183119.jpg" class="" alt="...">
+                  <div class="desc">【8項練習洞察心理】重新思考面對衝突的方式</div>
+                </div>
+                <div class="book-item">
+                  <img src="https://s2.eslite.dev/unsafe/s.eslite.dev/b2b/newItem/2023/12/01/288_133650440_200_mainCoverImage1.jpg" class="" alt="...">
+                  <div class="desc">【8項練習洞察心理】重新思考面對衝突的方式</div>
+                </div>
+                <div class="book-item">
+                  <img src="https://s2.eslite.dev/unsafe/s.eslite.dev/b2b/vendor/112420231109111238/mainCoverImage1_1176964.jpg" class="" alt="...">
+                  <div class="desc">【8項練習洞察心理】重新思考面對衝突的方式</div>
+                </div>
+                <div class="book-item">
+                  <img src="https://s2.eslite.dev/unsafe/s.eslite.dev/b2b/newItem/2023/12/01/288_133650440_200_mainCoverImage1.jpg" class="" alt="...">
+                  <div class="desc">【8項練習洞察心理】重新思考面對衝突的方式</div>
+                </div>      
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#Controls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#Controls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+
+            <div id="Controls" class="booklist-carousel slide" data-bs-ride="carousel">
+              <div class="title">新品推薦</div>
+              <hr>
+              <div class="booklist-carousel-inner">
+                <div class="book-item">
+                  <img src="https://s2.eslite.dev/unsafe/s.eslite.dev/b2b/newItem/2023/11/29/225_142846839_632_mainCoverImage1.jpg" class="" alt="...">
+                  <div class="desc">【8項練習洞察心理】重新思考面對衝突的方式</div>
+                </div>
+                <div class="book-item">
+                  <img src="https://s2.eslite.dev/unsafe/s.eslite.dev/b2b/vendor/12_220231122172115/mainCoverImage1_1183119.jpg" class="" alt="...">
+                  <div class="desc">【8項練習洞察心理】重新思考面對衝突的方式</div>
+                </div>
+                <div class="book-item">
+                  <img src="https://s2.eslite.dev/unsafe/s.eslite.dev/b2b/newItem/2023/12/01/288_133650440_200_mainCoverImage1.jpg" class="" alt="...">
+                  <div class="desc">【8項練習洞察心理】重新思考面對衝突的方式</div>
+                </div>
+                <div class="book-item">
+                  <img src="https://s2.eslite.dev/unsafe/s.eslite.dev/b2b/vendor/112420231109111238/mainCoverImage1_1176964.jpg" class="" alt="...">
+                  <div class="desc">【8項練習洞察心理】重新思考面對衝突的方式</div>
+                </div>
+                <div class="book-item">
+                  <img src="https://s2.eslite.dev/unsafe/s.eslite.dev/b2b/newItem/2023/12/01/288_133650440_200_mainCoverImage1.jpg" class="" alt="...">
+                  <div class="desc">【8項練習洞察心理】重新思考面對衝突的方式</div>
+                </div>      
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#Controls" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#Controls" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
           </div>
 
-          <div id="Controls" class="booklist-carousel slide" data-bs-ride="carousel">
-            <div class="title">新品推薦</div>
-            <hr>
-            <div class="booklist-carousel-inner">
-              <div class="book-item">
-                <img src="https://s2.eslite.dev/unsafe/s.eslite.dev/b2b/newItem/2023/11/29/225_142846839_632_mainCoverImage1.jpg" class="" alt="...">
-                <div class="desc">【8項練習洞察心理】重新思考面對衝突的方式</div>
-              </div>
-              <div class="book-item">
-                <img src="https://s2.eslite.dev/unsafe/s.eslite.dev/b2b/vendor/12_220231122172115/mainCoverImage1_1183119.jpg" class="" alt="...">
-                <div class="desc">【8項練習洞察心理】重新思考面對衝突的方式</div>
-              </div>
-              <div class="book-item">
-                <img src="https://s2.eslite.dev/unsafe/s.eslite.dev/b2b/newItem/2023/12/01/288_133650440_200_mainCoverImage1.jpg" class="" alt="...">
-                <div class="desc">【8項練習洞察心理】重新思考面對衝突的方式</div>
-              </div>
-              <div class="book-item">
-                <img src="https://s2.eslite.dev/unsafe/s.eslite.dev/b2b/vendor/112420231109111238/mainCoverImage1_1176964.jpg" class="" alt="...">
-                <div class="desc">【8項練習洞察心理】重新思考面對衝突的方式</div>
-              </div>
-              <div class="book-item">
-                <img src="https://s2.eslite.dev/unsafe/s.eslite.dev/b2b/newItem/2023/12/01/288_133650440_200_mainCoverImage1.jpg" class="" alt="...">
-                <div class="desc">【8項練習洞察心理】重新思考面對衝突的方式</div>
-              </div>      
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#Controls" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#Controls" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
-          </div>
 
-          <div id="Controls" class="booklist-carousel slide" data-bs-ride="carousel">
-            <div class="title">新品推薦</div>
-            <hr>
-            <div class="booklist-carousel-inner">
-              <div class="book-item">
-                <img src="https://s2.eslite.dev/unsafe/s.eslite.dev/b2b/newItem/2023/11/29/225_142846839_632_mainCoverImage1.jpg" class="" alt="...">
-                <div class="desc">【8項練習洞察心理】重新思考面對衝突的方式</div>
-              </div>
-              <div class="book-item">
-                <img src="https://s2.eslite.dev/unsafe/s.eslite.dev/b2b/vendor/12_220231122172115/mainCoverImage1_1183119.jpg" class="" alt="...">
-                <div class="desc">【8項練習洞察心理】重新思考面對衝突的方式</div>
-              </div>
-              <div class="book-item">
-                <img src="https://s2.eslite.dev/unsafe/s.eslite.dev/b2b/newItem/2023/12/01/288_133650440_200_mainCoverImage1.jpg" class="" alt="...">
-                <div class="desc">【8項練習洞察心理】重新思考面對衝突的方式</div>
-              </div>
-              <div class="book-item">
-                <img src="https://s2.eslite.dev/unsafe/s.eslite.dev/b2b/vendor/112420231109111238/mainCoverImage1_1176964.jpg" class="" alt="...">
-                <div class="desc">【8項練習洞察心理】重新思考面對衝突的方式</div>
-              </div>
-              <div class="book-item">
-                <img src="https://s2.eslite.dev/unsafe/s.eslite.dev/b2b/newItem/2023/12/01/288_133650440_200_mainCoverImage1.jpg" class="" alt="...">
-                <div class="desc">【8項練習洞察心理】重新思考面對衝突的方式</div>
-              </div>      
-            </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#Controls" data-bs-slide="prev">
-              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#Controls" data-bs-slide="next">
-              <span class="carousel-control-next-icon" aria-hidden="true"></span>
-              <span class="visually-hidden">Next</span>
-            </button>
           </div>
         </div>
+
  
 
 
-        <div class="wrap media-block">
+        <div class="container-fluid media-block">
 
 
           <div class="yt-block">
@@ -243,11 +276,14 @@
               ◎ 場地協力 → Daily by Draft Land
               ◎ 𝗙𝗢𝗟𝗟𝗢𝗪 🅘🅖 → www.instagram.com/500times_tw
             </div>
+            <img class="" src="https://s2.eslite.dev/unsafe/s.eslite.dev/b2b/vendor/12_220231122172115/mainCoverImage1_1183130.jpg" alt="">
           </div>
 
 
 
         </div>
+
+
 
 
         <ul class="social-links">
@@ -258,7 +294,7 @@
         </ul>
 
         <footer>
-          <div class="wrap">
+          <div class="container-fluid">
             <div class="box">
               <li><a href="">關於我們</a></li>
               <li><a href="">關於大邑</a></li>
@@ -273,11 +309,11 @@
               <li><a href=""></a></li>
 
             </div>
-            <ul class="box">
+            <div class="box">
               <li><a href="">書單下載</a></li>
               <li><a href="">常見問題</a></li>
               <li><a href="">聯絡我們</a></li>
-            </ul>
+            </div>
             <div class="box">
               社群
               <li><a href="">大邑</a></li>
