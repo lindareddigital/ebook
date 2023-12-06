@@ -70,6 +70,8 @@ a{
   color: white;
   text-decoration: none;
   margin: 0 6px;
+  font-weight: bold;
+  font-size: 16px;
 }
 
 .header-main{
@@ -81,6 +83,7 @@ a{
 
 .header-search-bar{
   display: flex;
+  align-items: center;
 }
 
 .logo{
@@ -109,11 +112,12 @@ a{
 
 .navbar{
   background:  #B29B15;
+  display: none  !important;
 }
 
 .header-search-input {
     display: block;
-    width: 400px !important;
+    width: 800px !important;
     padding: 0.375rem 0.75rem;
     font-size: 1rem;
     font-weight: 400;
@@ -224,7 +228,7 @@ a{
 
 .yt-block{
   display: flex;
-  width: 60%;
+  width: 80%;
 }
 
 .yt-block > .more{
@@ -243,7 +247,7 @@ a{
 .main-body{
   margin: auto;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   padding: 16px 0px;
   width: 100%;
 }
@@ -366,6 +370,10 @@ hr{
   height: 48px;
 }
 
+.keyword-block{
+  margin-top: 4px;
+}
+
 .keyword-block a{
     cursor: pointer;
     user-select: none;
@@ -419,6 +427,14 @@ footer .container-fluid{
 
 .content{
   display: flex;
+  color: #666;
+  font-size: 13px;
+  align-items: center;
+}
+
+.content a{
+  color: #666;
+  font-size: 13px;
 }
 
 .content img{
@@ -426,12 +442,45 @@ footer .container-fluid{
     height: 348px;
 }
 
+
+.content h1 {
+  font-size: 20px;
+  color: #000;
+  font-weight: bold;
+  margin-bottom: 8px;
+
+}
+
+.content li{
+  margin-bottom: 8px;
+}
+
+.nav-link{
+    text-align: left;
+    font-size: 14px;
+    font-weight: bold;
+    color: #f28900;
+    line-height: 1.5;
+    border-bottom: 1px dotted #d8d8d8;
+}
+
+.tab-pane{
+  padding: 10px 0px;
+  color: #232323;
+  font-size: 12px;
+  line-height: 16px;
+}
+
 @media (max-width: 1200px){
 
 .container-fluid {
     width: calc(100vw - 32px)
-
 }
+
+.header-search-input{
+  width: 600px !important;
+}
+
 
 }
 
@@ -491,18 +540,23 @@ footer .box{
   width: 50%;
 }
 
+.navbar{
+  display: block !important;
+}
+
+.header-search-input{
+  width: 500px !important;
+}
+
 
 }
 
 @media (max-width: 768px){
 
-.book-item {
-  width: 100%;
-}
 
-.book-item img{
+/* .book-item img{
   height: 550px;
-}
+} */
 
 footer .container-fluid{
   flex-direction: column;
