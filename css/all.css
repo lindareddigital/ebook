@@ -50,6 +50,11 @@ a{
   text-decoration: none;
 }
 
+.btn-outline-secondary {
+    color: #B29B15 !important;
+    border-color: #B29B15 !important;
+}
+
 
 .menu-bar{
   margin: 0;
@@ -70,8 +75,7 @@ a{
   color: white;
   text-decoration: none;
   margin: 0 6px;
-  font-weight: bold;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .header-main{
@@ -116,7 +120,7 @@ a{
 }
 
 .input-group{
-  height: 40px;
+  height: 38px;
 }
 
 .header-search-input {
@@ -130,7 +134,7 @@ a{
     color: #495057;
     background-color: #fff;
     background-clip: padding-box;
-    border: 1px solid #ced4da;
+    border: 1px solid #B29B15;
     -webkit-appearance: none;
     appearance: none;
     border-radius: 0;
@@ -139,15 +143,52 @@ a{
 
 .home-banner{
   background: #f4f4f4;
-  width: 100vw;
+  width: 1200px;
+  margin: auto;
+  height: 450px;
   display: flex;
   justify-content: center;
 }
 
+.home-banner .leftbox{
+  background: #fff;
+  width: 300px;
+  height: 100%;
+}
+
+ .leftbox .title{
+  line-height: initial;
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #B29B15;
+  text-align: center;
+  padding: 12px;
+ }
+
+.leftbox .desc{
+  letter-spacing: normal;
+  height: 3.99rem;
+  line-height: 1.33rem;
+  -webkit-line-clamp: 3;
+  text-overflow: ellipsis;
+ }
+
+.leftbox .webp-image{
+  width: 120px;
+  height: 120px;
+}
+
 .home-banner-carousel{
   height: 100%;
-  width: 600px;
+  width: 900px;
   position: relative;
+}
+
+.e-banner-product {
+  padding: 15px;
+  border-top: 1px #fde8e8  solid;
+  display: flex;
+  align-items: center;
 }
 
 .listing-banner{
@@ -274,15 +315,19 @@ a{
 .header-toolbar{
   display: flex;
   align-items: center;
-  width: 30%;
+  font-size: 13px;
 }
 
-.header-toolbar svg{
-  height: 25px !important;
-  width: 25px !important;
+.header-toolbar img{
+  height: 16px !important;
+  width: 16px !important;
+  margin-left: 4px;
 }
 
 .header-toolbar .btn{
+  font-size: 13px;
+  align-items: center;
+  display: flex;
 }
 
 .label-group{
@@ -294,8 +339,13 @@ a{
   border: 1px solid #8b8a8a;
   padding: 6px;
   margin-right: 12px;
-  width: 60px;
+  width: 40px;
+  display: flex;
+  height: 25px;
+  align-items: center;
   text-align: center;
+  font-size: 13px;
+
 }
 
 .share-block{
@@ -389,6 +439,11 @@ hr{
     letter-spacing: .6px;
     letter-spacing: .0375rem;
     white-space: nowrap;
+}
+
+.keyword-block a:before {
+  content: "|";
+  padding: 0 4px;
 }
 
  .social-links {
@@ -548,7 +603,7 @@ footer .container-fluid{
 
 .posts-categories{
   position: sticky;
-  width: 150px;
+  width: 300px;
   display: flex;
 }
 
@@ -556,15 +611,21 @@ footer .container-fluid{
   background: #e0e0e0 !important;
   flex-wrap: nowrap;
   min-height: 48px;
-  padding: 8px 16px;
-  width: 100%;
+  padding: 16px;
+  width: 300px;
+}
+
+.post-title a{
+  font-size: 16px;
+  color: #555;
 }
 
 .post-excerpt{
-  margin-bottom: 24px;
+  margin-bottom: 16px;
   line-height: 1.5;
   letter-spacing: 0.05em;
   color: #333;
+  font-size: 13px;
 }
 
 .post-meta-tag.category {
@@ -572,28 +633,46 @@ footer .container-fluid{
     border-radius: 3px;
     background-color: #4caf50;
     color: #fff;
-    width: 50px;
+    width: 40px;
+}
+
+.post-meta{
+  display: flex;
+  align-items: center;
+  font-size: 14px;
 }
 
 .posts-category{
   display: flex;
   width: 100%;
   color: #495057;
+  justify-content: space-between;
+  height: 35px;
+  align-items: center;
+  font-size: 13px;
+  padding: 16px;
+}
+
+.posts-category:hover{
+    background-color: #9e9d24 !important;
 }
 
 .post-title{
   font-size: 1.8rem;
   letter-spacing: 0.05em;
-  margin-bottom: 1rem;
+  margin-bottom: 4px;
 }
 
 .q-img__image{
   width: 250px;
   height: 200px;
+  margin-right: 12px;
 }
 
-.q-list{
-
+.post-meta-date{
+  font-size: 12px;
+  margin-left: 4px;
+  color: #9e9e9e !important;
 }
 
 .input-group{
@@ -608,6 +687,10 @@ footer .container-fluid{
 
 .header-search-input{
   width: 600px !important;
+}
+
+.home-banner{
+  width: 100vw;
 }
 
 
@@ -684,8 +767,21 @@ footer .box{
 
 .header-search-input{
   /* width: 500px !important; */
-    width: calc(100vw - 32px)!important;
+    width: calc(50vw - 32px)!important;
+}
 
+.home-banner{
+  flex-direction: column;
+  height: unset;
+  width: calc(100vw - 32px)!important;
+}
+
+.home-banner .leftbox{
+  width: calc(100vw - 32px);
+}
+
+.home-banner-carousel{
+  width: unset;
 }
 
 
