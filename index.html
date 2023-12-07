@@ -47,15 +47,35 @@
           <div class="header-search-bar">
             <img class="logo" src="./images/logo.jpeg" alt="">
             <div class="">
-              <!-- <div class="label-group">
+              <div class="label-group">
                 <button type="button" class="btn btn-outline-secondary">海濱</button>
                 <button type="button" class="btn btn-outline-secondary">一丁</button>
-              </div> -->
+              </div>
               <form class="input-group">
+                <div class="dropdown">
+                  <a class="btn btn-outline-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+                    全站
+                  </a>
+
+                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                  </ul>
+                </div>
                 <input class="form-control header-search-input" type="text">
                 <button class="search-btn btn" type="submit" >
                   <img src="https://api.iconify.design/fa:search.svg" alt="">
                 </button>
+
+                <div class="header-toolbar">
+                  <button type="button" class="btn ">購物車
+                    <img src="https://api.iconify.design/fa:shopping-cart.svg" alt="">
+                  </button>
+
+                  <button type="button" class="btn ">登入</button>
+                  <button type="button" class="btn">註冊</button>  
+                </div>
               </form>
               <div class="keyword-block">
                 <a href="">全站滿額現折</a>
@@ -66,27 +86,23 @@
             </div>
           </div>            
 
-          <div class="header-toolbar">
-            <button type="button" class="btn ">購物車
-              <img src="https://api.iconify.design/fa:shopping-cart.svg" alt="">
-            </button>
-
-            <button type="button" class="btn ">登入</button>
-            <button type="button" class="btn">註冊</button>  
-          </div>
-         
-
         </div>
 
         <div class="menu-bar">
           <div class="">
-            <a href="" class="link">誠品推薦</a>
+            <a href="" class="link">全站分類</a>
           </div>
           <div class="">
-            <a href="" class="link">中文出版</a>
+            <a href="" class="link">童書</a>
           </div>
           <div class="">
-            <a href="" class="link">中文出版</a>
+            <a href="" class="link">成書</a>
+          </div>
+          <div class="">
+            <a href="" class="link">益智產品</a>
+          </div>
+          <div class="">
+            <a href="" class="link">買書GO</a>
           </div>
 
         </div>
@@ -141,6 +157,33 @@
                 <a href="">美妝贈品</a>
               </li>
             </ul>
+
+              <div class="accordion" id="accordionExample">
+              <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  依系列搜尋
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  依類別搜尋
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                  <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.
+                </div>
+              </div>
+            </div>
+          </div> 
           </aside>
 
 
@@ -168,16 +211,17 @@
                 <div class="book-item">
                   <img src="https://s2.eslite.dev/unsafe/s.eslite.dev/b2b/newItem/2023/12/01/288_133650440_200_mainCoverImage1.jpg" class="" alt="...">
                   <div class="desc">【8項練習洞察心理】重新思考面對衝突的方式</div>
-                </div>      
+                </div>   
+                <!-- <button class="carousel-control-prev" type="button" data-bs-target="#Controls" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#Controls" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>    -->
               </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#Controls" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-              </button>
-              <button class="carousel-control-next" type="button" data-bs-target="#Controls" data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-              </button>
+              
             </div>
 
             <div id="Controls" class="booklist-carousel slide" data-bs-ride="carousel">
@@ -205,14 +249,14 @@
                   <div class="desc">【8項練習洞察心理】重新思考面對衝突的方式</div>
                 </div>      
               </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#Controls" data-bs-slide="prev">
+              <!-- <button class="carousel-control-prev" type="button" data-bs-target="#Controls" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
               </button>
               <button class="carousel-control-next" type="button" data-bs-target="#Controls" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
-              </button>
+              </button> -->
             </div>
 
             <div id="Controls" class="booklist-carousel slide" data-bs-ride="carousel">
@@ -240,14 +284,14 @@
                   <div class="desc">【8項練習洞察心理】重新思考面對衝突的方式</div>
                 </div>      
               </div>
-              <button class="carousel-control-prev" type="button" data-bs-target="#Controls" data-bs-slide="prev">
+              <!-- <button class="carousel-control-prev" type="button" data-bs-target="#Controls" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
               </button>
               <button class="carousel-control-next" type="button" data-bs-target="#Controls" data-bs-slide="next">
                 <span class="carousel-control-next-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Next</span>
-              </button>
+              </button> -->
             </div>
           </div>
 
