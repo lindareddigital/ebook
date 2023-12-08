@@ -143,7 +143,7 @@ a{
 
 .home-banner{
   background: #f4f4f4;
-  width: 1200px;
+  width: 100vw;
   margin: auto;
   height: 450px;
   display: flex;
@@ -186,7 +186,7 @@ a{
 
 .e-banner-product {
   padding: 15px;
-  border-top: 1px #fde8e8  solid;
+  border-top: 1px #B29B15 solid;
   display: flex;
   align-items: center;
 }
@@ -204,7 +204,7 @@ a{
 
 
 .list-aside{
-  width: 250px;
+  width: 197px;
   border: 1px solid #ccc;
 }
 
@@ -240,7 +240,7 @@ a{
 .book-item{
   height: 225px;
   width: 144px;
-  margin: 0px 12px;
+  margin: 6px 12px;
   position: relative;
 }
 
@@ -255,6 +255,12 @@ a{
     background: url(https://jci.book.com.tw/css/books/product/images/sp_type02_icon1.png) no-repeat -800px -1050px;
 }
 
+.book-item .img-block{
+  width: 100%;
+  /* height: 167px; */
+  display: block;
+  position: relative;
+}
 
 .book-item img{
   margin-bottom: 8px;
@@ -264,13 +270,15 @@ a{
 }
 
 .booklist-carousel{
-  width:850px;
+  max-width:1000px;
   margin-bottom: 16px;
+  position: relative;
 }
 
 .booklist-carousel-inner{
   width: 100%;
   display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
 }
 
@@ -278,6 +286,12 @@ a{
   padding: 20px 0px;
   display: flex;
   justify-content: space-between;
+}
+
+.price-num{
+  color: #d00008;
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .yt-block{
@@ -308,6 +322,7 @@ a{
 
 .main-body .right-side{
   margin-left: 30px;
+  width: 80%;
 }
 
 .title{
@@ -316,6 +331,16 @@ a{
   line-height: 1.625rem;
   color: black;
   font-weight: 500;
+}
+
+.gray-cover{
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: rgba(0,0,0,.03);
+    pointer-events: none;
 }
 
 .header-toolbar{
@@ -342,7 +367,8 @@ a{
 }
 
 .label-group .btn{
-  border: 1px solid #8b8a8a;
+  border: 1px solid #B29B15;
+  color: #B29B15;
   padding: 6px;
   margin-right: 12px;
   width: 40px;
@@ -351,7 +377,11 @@ a{
   align-items: center;
   text-align: center;
   font-size: 13px;
+}
 
+.dropdown-toggle{
+  border: 1px solid #B29B15;
+  color: #B29B15;
 }
 
 .share-block{
@@ -378,7 +408,6 @@ a{
 }
 
 .desc{
-    height: 2.785rem;
     line-height: 1.33rem;
     font-size: 13px;
     color: black;
@@ -411,6 +440,7 @@ footer .box{
 footer li {
   margin-bottom: 15px;
   display: flex;
+  justify-content: center;
   align-items: flex-start;
   font-weight: normal;
   line-height: 1.75em;
@@ -541,7 +571,17 @@ footer .container-fluid{
 
 .carousel-control-next, .carousel-control-prev{
   height: 50px !important;
+  top: 50% !important;
+  transform: translateY(-50%);
 }
+
+/* .carousel-control-next {
+  right: -67px;
+}
+
+.carousel-control-prev{
+  left: -67px;
+} */
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon{
@@ -636,7 +676,6 @@ footer .container-fluid{
   z-index: 99;
   border: none; 
   outline: none; 
-  background-color: var(--white);
   box-shadow: 0 2px 4px rgba(0,0,0,.5);
   cursor: pointer; 
   padding: 15px;
@@ -645,7 +684,7 @@ footer .container-fluid{
 }
 
 #topBtn:hover {
-  background-color: #555;
+  background-color: #fff;
 }
 
 .q-item{
@@ -781,6 +820,7 @@ footer .container-fluid{
 
 .main-body .right-side{
   margin-left: 0;
+  width: 100%;
   margin: auto;
 }
 
@@ -794,8 +834,24 @@ footer .container-fluid{
   
 }
 
+/* .carousel-control-next {
+  right: -6px;
+}
+
+.carousel-control-prev{
+  left: 7px;
+} */
+
 .yt-block,.yt-block iframe{
-  width: 100%
+  width: 100%;
+  aspect-ratio: 4/3;
+  height: auto;
+  -o-object-fit: cover;
+  object-fit: cover;
+}
+
+.yt-block{
+  flex-direction: column;
 }
 
 footer .box{
@@ -833,10 +889,48 @@ footer .box{
   display: none;
 }
 
+.yt-block > .more{
+  width: 100%;
+  margin-left: 0;
+}
+
+.yt-block iframe{
+  margin: 10px 0px;
+}
+
 
 }
 
 @media (max-width: 768px){
+
+.social-links li{
+  margin: 0px 10px;
+}
+
+.dropdown-toggle{
+  display: none;
+}
+
+.book-item {
+  width: 43%;
+}
+
+.book-item img {
+  /* height: unset; */
+  aspect-ratio: 3/3;
+  height: auto;
+}
+
+footer li{
+  justify-content: start;
+}
+
+
+
+}
+
+
+@media (max-width: 600px){
 
 footer .container-fluid{
   flex-direction: column;
@@ -844,13 +938,8 @@ footer .container-fluid{
 } 
 
 .book-item {
-  width: 43%;
+    width: 42%;
 }
-
-.book-item img {
-  height: unset;
-}
-
 
 }
 
