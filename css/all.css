@@ -223,6 +223,12 @@ a{
 
 .list-aside li a{
   color: black;
+  font-size: 13px;
+}
+
+.accordion-button{
+  font-size: 13px;
+  font-weight: bold;
 }
 
 .listing-toolbar{
@@ -362,7 +368,7 @@ a{
 
 .share-block .title{
   font-weight: bold;
-  font-size: 25px;
+  font-size: 20px;
   margin-bottom: 8px;
 }
 
@@ -374,7 +380,7 @@ a{
 .desc{
     height: 2.785rem;
     line-height: 1.33rem;
-    font-size: .9375rem;
+    font-size: 13px;
     color: black;
     margin-bottom: 3px;
     white-space: normal;
@@ -591,13 +597,13 @@ footer .container-fluid{
   width: 16px;
   height: 16px;
   color: #a82130;
-      filter: invert(100%);
-    font-size: 1.5em;
+  filter: invert(100%);
+  font-size: 1.5em;
 }
 
 .share-list-item{
   display: flex;
-  padding: 2rem 0 2.5rem;
+  padding: 1rem 0 1rem;
   border-bottom: 2px solid rgba(0,0,0,0.06);
 }
 
@@ -605,6 +611,41 @@ footer .container-fluid{
   position: sticky;
   width: 300px;
   display: flex;
+}
+
+.message-btn img{
+  position: sticky;
+  width: 60px;
+  height: 60px;
+  position: fixed;
+  z-index: 1000;
+  bottom: 80px;
+  right: 30px;
+}
+
+.sidebtn-container{
+  display: flex;
+  flex-direction: column;
+}
+
+#topBtn {
+  display: none; 
+  position: fixed; 
+  bottom: 20px; 
+  right: 30px; 
+  z-index: 99;
+  border: none; 
+  outline: none; 
+  background-color: var(--white);
+  box-shadow: 0 2px 4px rgba(0,0,0,.5);
+  cursor: pointer; 
+  padding: 15px;
+  border-radius: 10px;
+  font-size: 18px; 
+}
+
+#topBtn:hover {
+  background-color: #555;
 }
 
 .q-item{
@@ -782,6 +823,14 @@ footer .box{
 
 .home-banner-carousel{
   width: unset;
+}
+
+.share-list{
+  width: 100%;
+}
+
+.posts-categories{
+  display: none;
 }
 
 
