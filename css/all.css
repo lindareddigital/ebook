@@ -589,6 +589,10 @@ footer .container-fluid{
   filter: invert(100%);
 }
 
+.contact-us{
+  width: 80%;
+}
+
 .sidebar-wrapper{
   z-index: 99;
   right: 0;
