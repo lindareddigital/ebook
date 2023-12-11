@@ -221,9 +221,18 @@ a{
   margin: auto;
 }
 
+.accordion-body li{
+  border-bottom: none;
+  padding: 8px;
+}
+
 .list-aside li a{
   color: black;
   font-size: 13px;
+}
+
+.form-comments{
+  height: 400px;
 }
 
 .accordion-button{
@@ -626,23 +635,27 @@ footer .container-fluid{
     display: block;
     border-radius: 50%;
     overflow: hidden;
-    border: 1px solid #a82130;
+    background: #fff;
+    /* border: 1px solid #a82130; */
+    border-style: none;
     color: #a82130;
-    padding: 8px;
     margin: 0 2px;
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
     right: 0;
     top: 0;
     position: absolute;
 }
 
-.wish-btn svg{
+
+.wish-btn i{
   width: 16px;
   height: 16px;
   color: #a82130;
-  filter: invert(100%);
-  font-size: 1.5em;
+  display: block;
+  position: absolute;
+  top: 3px;
+  right: 0px;
 }
 
 .share-list-item{
