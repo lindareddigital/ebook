@@ -2,27 +2,23 @@
 <html class="">
     <head>
         <meta charset="utf-8">
-        <title>home</title>
+        <title>singlepage</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="icon" type="image/x-icon" href="../layout/assets/icons/ico_logo.ico" />
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-        <!-- <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/> -->
-        <!-- 引入 React 和 ReactDOM -->
-        <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
-        <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
-        <!-- 引入 Babel 以支援 JSX 語法 -->
-        <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+        
+        <link href="./css/bootstrap.min.css" rel="stylesheet">
         <link href="./css/all.css" rel="stylesheet">
 
- 
-        <script src="./js/main.js"></script>
+        <script src="../js/jquery-3.6.0.min.js"></script>
+        <script src="./js/bootstrap.min.js"></script>
+        <script src="../js/swiper-bundle.min.js"></script>
+        <script src="../js/cusAnimation.min.js"></script>
+        <script src="../js/main.js"></script>
         <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script> -->
     </head>
 
-    <body class="home-page">
+    <body class="single-page">
 
       <!-- <div class="sidebar-wrapper scroll-cling-top">
         <div class="scroll-active"><div id="sidebar-menu-3-0" class="d-none d-lg-flex tab">
@@ -53,16 +49,6 @@
 
 
       <div class="sidebtn-container">
-        <!-- Load Facebook SDK for JavaScript -->
-        <div id="fb-root"></div>
-        <!-- Your Chat Plugin code -->
-        <div class="fb-customerchat"
-          attribution="setup_tool"
-          page_id="101vision"
-          theme_color="#6699cc"
-          logged_in_greeting="Hi! How can we help you?"
-          logged_out_greeting="Hi! How can we help you?">
-        </div>
         <div class="message-btn">
           <img src="https://upload.wikimedia.org/wikipedia/commons/b/be/Facebook_Messenger_logo_2020.svg" alt="">
         </div>
@@ -95,109 +81,46 @@
 
         <div class="container-fluid header-main">
 
+
           <div class="header-search-bar">
             <img class="logo" src="./images/logo.jpeg" alt="">
             <div class="">
-              <div class="label-group">
-                <button type="button" class="btn">海濱</button>
-                <button type="button" class="btn">一丁</button>
-              </div>
+             
               <form class="input-group">
-                <div class="dropdown">
-                  <a class="btn dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
-                    全站
-                  </a>
-
-                  <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-                    <li><a class="dropdown-item" href="#">Action</a></li>
-                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                    <li><a class="dropdown-item" href="#">Something else here</a></li>
-                  </ul>
-                </div>
-                <input class="form-control header-search-input" type="text">
-                <button class="search-btn btn" type="submit" >
-                  <i class="fa fa-search" aria-hidden="true"></i>
-                </button>
+                
+              
 
                 <div class="header-toolbar">
-                  <button type="button" class="btn ">購物車
-                    <img src="https://api.iconify.design/fa:shopping-cart.svg" alt="">
+                  <button type="button" class="btn ">
+                    <i class="fa fa-home mr-2" aria-hidden="true"></i>
+                    回首頁(大邑)
                   </button>
 
-                  <button type="button" class="btn ">登入</button>
-                  <button type="button" class="btn">註冊</button>  
+                  <div class="">XXX,您好</div>  
                 </div>
               </form>
-              <div class="keyword-block">
-                <a href="">全站滿額現折</a>
-                <a href="">斜槓文具5折起</a>
-                <a href="">下單抽香奈兒</a>
-                <a href=""></a>
-              </div>
+              
             </div>
-          </div>            
+          </div>   
+         
 
         </div>
 
-        <div class="menu-bar">
-          
-          <!-- <div class="dropdown">
-            <a href="" class="link dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">全站分類</a>
-            <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-              <li><a class="dropdown-item" href="#">Action</a></li>
-              <li><a class="dropdown-item" href="#">Another action</a></li>
-              <li><a class="dropdown-item" href="#">Something else here</a></li>
-            </ul>
-          </div> -->
-          <!-- <div class="">
-            <a href="" class="link">童書</a>
-          </div>
-          <div class="">
-            <a href="" class="link">成書</a>
-          </div>
-          <div class="">
-            <a href="" class="link">益智產品</a>
-          </div>
-          <div class="">
-            <a href="" class="link">買書GO</a>
-          </div> -->
-
-        </div>
+        
 
 
         <div class="home-banner">
 
-          <div class="leftbox">
-            <div class="title">最新消息</div>
-            <div class="e-banner-product">
-              <img class="webp-image" src="https://s2.eslite.dev/unsafe/s.eslite.dev/upload/product/o/2682262815004/20220930032401652408.jpg">
-              <div class="text">
-                <div class="desc">
-                  .X萬獸探險隊特別篇5 11/15即將上市.入選誠品TOP100書單
-                  .X萬獸探險隊 算數王之戰 遊戲玩法
-                </div>
-              </div>
-            </div>
-            <div class="e-banner-product">
-              <img class="webp-image" src="https://s2.eslite.dev/unsafe/s.eslite.dev/upload/product/o/2682262815004/20220930032401652408.jpg">
-              <div class="text">
-                <div class="desc">
-                  .X萬獸探險隊特別篇5 11/15即將上市.入選誠品TOP100書單
-                  .X萬獸探險隊 算數王之戰 遊戲玩法
-                </div>
-              </div>
-            </div>
-          </div>
           <div id="carouselExampleControls" class="home-banner-carousel carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
               <div class="carousel-item active">
                 <img src="https://s2.eslite.dev/unsafe/s.eslite.dev/2uoe0qjpbv2fhogg4qtn09ramz1e" class="d-block w-100 h-100" alt="...">
               </div>
               <div class="carousel-item">
-                <img src="https://images.unsplash.com/photo-1701735173211-bc2375b0909d?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100 h-100" alt="...">
+                <img src="https://s2.eslite.dev/unsafe/s.eslite.dev/2uoe0qjpbv2fhogg4qtn09ramz1e" class="d-block w-100" alt="...">
               </div>
               <div class="carousel-item">
-                <img src="https://images.unsplash.com/photo-1701735173211-bc2375b0909d?q=80&w=2071&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="d-block w-100 h-100" alt="...">
+                <img src="https://s2.eslite.dev/unsafe/s.eslite.dev/2uoe0qjpbv2fhogg4qtn09ramz1e" class="d-block w-100" alt="...">
               </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
@@ -311,23 +234,7 @@
 
 
           <div class="right-side">
-
-            <!-- Swiper -->
-            <div class="swiper-container">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">Slide 1</div>
-                <div class="swiper-slide">Slide 2</div>
-                <div class="swiper-slide">Slide 3</div>
-                <div class="swiper-slide">Slide 4</div>
-                <div class="swiper-slide">Slide 5</div>
-              </div>
-              <!-- Add Pagination -->
-              <div class="swiper-pagination"></div>
-              <!-- Add Navigation -->
-              <div class="swiper-button-next"></div>
-              <div class="swiper-button-prev"></div>
-            </div>
-            <div id="Controls" class="render booklist-carousel carousel slide" data-bs-ride="carousel">
+            <div id="Controls" class="booklist-carousel slide" data-bs-ride="carousel">
               <div class="title">X萬獸探險隊</div>
               <hr>
               <div class="booklist-carousel-inner">
@@ -368,7 +275,7 @@
               
             </div>
 
-            <div id="Controls" class="booklist-carousel carousel slide" data-bs-ride="carousel">
+            <div id="Controls" class="booklist-carousel slide" data-bs-ride="carousel">
               <div class="title">X萬獸探險隊</div>
               <hr>
               <div class="booklist-carousel-inner">
@@ -409,7 +316,7 @@
               
             </div>
 
-            <div id="Controls" class="booklist-carousel carousel slide" data-bs-ride="carousel">
+            <div id="Controls" class="booklist-carousel slide" data-bs-ride="carousel">
               <div class="title">X萬獸探險隊</div>
               <hr>
               <div class="booklist-carousel-inner">
@@ -471,20 +378,57 @@
             </div>
          
           </div>
-          <div class="share-block">
-            <div class="title">分享專欄</div>
-            <div class="desc">
-              由獨角獸計畫與500輯共同舉辦的「閱讀與思考派對」第四場由李惠貞主講「人生的解答」，以自身經驗與觀點，交融《在深夜遇見薩古魯》與《一個瑜伽士的內在喜悅工程》中薩古魯的超脫見解分享給所有讀者。
-              ◎ 講座報導紀錄 → https://reurl.cc/zbrDVk​
-              ◎ 場地協力 → Daily by Draft Land
-              ◎ 𝗙𝗢𝗟𝗟𝗢𝗪 🅘🅖 → www.instagram.com/500times_tw
-            </div>
-            <img class="" src="https://s2.eslite.dev/unsafe/s.eslite.dev/upload/product/o/2682262815004/20220930032401652408.jpg" alt="">
-          </div>
-
-
-
+        
         </div>
+
+
+          <div class="recipe-title">美味食譜</div>
+          <div class="recipe-block">
+            <div class="container-fluid recipe-wrapper">
+
+                <div class="recipe-card">
+
+                  <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                  <div class="recipe-desc">海鹽巧克力軟餅乾</div>
+                </div>
+                <div class="recipe-card">
+
+                  <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                  <div class="recipe-desc">海鹽巧克力軟餅乾</div>
+                </div>
+                <div class="recipe-card">
+
+                  <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                  <div class="recipe-desc">海鹽巧克力軟餅乾</div>
+                </div>
+                <div class="recipe-card">
+
+                  <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                  <div class="recipe-desc">海鹽巧克力軟餅乾</div>
+                </div>
+                <div class="recipe-card">
+
+                  <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                  <div class="recipe-desc">海鹽巧克力軟餅乾</div>
+                </div>
+                <div class="recipe-card">
+
+                  <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                  <div class="recipe-desc">海鹽巧克力軟餅乾</div>
+                </div>
+                <div class="recipe-card">
+
+                  <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                  <div class="recipe-desc">海鹽巧克力軟餅乾</div>
+                </div>
+                <div class="recipe-card">
+
+                  <img src="https://images.unsplash.com/photo-1551024601-bec78aea704b?q=80&w=1964&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+                  <div class="recipe-desc">海鹽巧克力軟餅乾</div>
+                </div>
+            </div>
+          </div>
+        <!-- </div> -->
 
 
 
@@ -526,107 +470,30 @@
         </footer>
 
     </body>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-<!-- <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script> -->
-<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
 
 
 <script type="text/javascript">
-$(document).ready(function() {
 
-  var swiper = new Swiper('.swiper-container', {
-    slidesPerView: 5,
-    spaceBetween: 30,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
-    },
-  });
-});
-</script>
+let topbutton = document.getElementById("topBtn");
 
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function() {scrollFunction()};
 
-<script type="text/babel">
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    topbutton.style.display = "block";
+  } else {
+    topbutton.style.display = "none";
+  }
+}
 
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
 
-  fetch('js/categories_book.json')
-  .then(response => response.json())
-  .then(data => {
-
-    const listItems = [];
-
-    data.forEach(item => {
-
-    console.log(item.description);
-
-
-      fetch('js/categories_book.json')
-        .then(response => response.json())
-        .then(data => {
-
-          const listItems = [];
-          const booklist = [];
-
-
-          data.forEach(item => {
-            listItems.push(
-              // <div class="">
-              //   <a href="" class="link">{item.description}</a>
-              // </div>
-              <div class="dropdown">
-                <a href="" class="link dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">{item.description}</a>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                  <li><a class="dropdown-item" href="#">Action</a></li>
-                  <li><a class="dropdown-item" href="#">Another action</a></li>
-                  <li><a class="dropdown-item" href="#">Something else here</a></li>
-                </ul>
-              </div>
-          );
-
-          });
-
-          console.log(item,'item');
-
-          ReactDOM.render(item, document.querySelector('.render'));
-
-
-
-
-          data.forEach(item => {
-
-            console.log(item,'sub item');
-
-            console.log(item.children.children.link,'link');
-            
-            booklist.push(
-              <div class="book-item">
-                <div class="desc mt-2">{item.path}</div>
-              </div>
-          );
-
-          });
-
-          ReactDOM.render(listItems, document.querySelector('.menu-bar'));
-          ReactDOM.render(booklist, document.querySelector('.render'));
-
-        })
-        .catch(error => console.error('Error:', error));
-
-    });
-  
-  })
 
 </script>
-
-
-
-
 
 
 
