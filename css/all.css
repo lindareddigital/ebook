@@ -48,6 +48,7 @@ table {
 
 a{
   text-decoration: none;
+  color: black;
 }
 
 .btn-outline-secondary {
@@ -76,6 +77,11 @@ a{
   text-decoration: none;
   margin: 0 6px;
   font-size: 14px;
+}
+
+.dropdown-item {
+  color: #666 !important;
+  padding: 0.5rem 1rem;
 }
 
 .header-main{
@@ -291,13 +297,33 @@ a{
   max-width:1000px;
   margin-bottom: 16px;
   position: relative;
+  height: 300px;
 }
 
 .booklist-carousel-inner{
   width: 100%;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
+}
+
+.swiper-slide{
+  width: auto !important;
+}
+
+.swiper-button-prev, .swiper-button-next{
+    height: 4rem;
+    width: 2rem;
+    transform: translateY(-1.5rem);
+    background-color: rgba(0,0,0,.2);
+    opacity: .8;
+    transition: .2s;
+    z-index: 99;
+}
+
+.swiper-button-prev:after, .swiper-button-next:after {
+    font-size: 1rem;
+    color: white;
 }
 
 .media-block{
@@ -636,13 +662,17 @@ footer .container-fluid{
   transform: translateY(-50%);
 }
 
-/* .carousel-control-next {
-  right: -67px;
+.carousel-control-next {
+  justify-content: end;
 }
 
 .carousel-control-prev{
-  left: -67px;
-} */
+  justify-content: start;
+}
+
+.dropdown-toggle::after{
+  display: none;
+}
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon{
