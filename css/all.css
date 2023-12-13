@@ -167,6 +167,18 @@ a{
   height: 100%;
 }
 
+.booklist-carousel .title{
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #B29B15;
+}
+
+.navbar-account{
+
+}
+
+
+
  .leftbox .title{
   line-height: initial;
   font-size: 1.25rem;
@@ -183,6 +195,11 @@ a{
   -webkit-line-clamp: 3;
   text-overflow: ellipsis;
  }
+
+.book-item .desc{
+  font-size: 16px;
+  font-weight: bold;
+}
 
 .leftbox .webp-image{
   width: 120px;
@@ -294,7 +311,7 @@ a{
 }
 
 .booklist-carousel{
-  max-width:1000px;
+  /* max-width:1000px; */
   margin-bottom: 16px;
   position: relative;
   height: 300px;
@@ -305,10 +322,6 @@ a{
   display: flex;
   justify-content: space-between;
   /* flex-wrap: wrap; */
-}
-
-.swiper-slide{
-  width: auto !important;
 }
 
 .swiper-button-prev, .swiper-button-next{
@@ -927,10 +940,17 @@ footer .container-fluid{
 
 @media (max-width: 992px){
 
+.booklist-carousel-inner{
+  flex-wrap: wrap;
+}
+
 .detail-page .main-body{
   flex-direction: column;
 }
 
+.swiper{
+  display: none;
+}
 
 .header-search-input{
   width: unset;
@@ -942,6 +962,7 @@ footer .container-fluid{
 
 .booklist-carousel{
   width: 100%;
+  height: unset;
 }
 
 .media-block{
@@ -954,10 +975,10 @@ footer .container-fluid{
 }
 
 .book-item{
-  width: 45%;
+  width: 43%;
   aspect-ratio: 4/3;
   height: auto;
-
+  margin-bottom: 24px;
 }
 
 .book-item img{
@@ -1077,9 +1098,8 @@ footer .box{
 }
 
 .book-item img {
-  /* height: unset; */
+  height: unset;
   aspect-ratio: 3/3;
-  height: auto;
 }
 
 footer li{
