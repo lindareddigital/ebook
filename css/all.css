@@ -173,8 +173,33 @@ a{
   color: #B29B15;
 }
 
-.navbar-account{
+.listing-page .booklist-carousel .title{
+  background: linear-gradient(rgba(255,255,255,0) 66%,#B29B15 34%);
+  padding: 0 0.4rem;
+  font-size: 2.125rem;
+  color: #212529;
+  width: 300px;
+  line-height: 50px;
+  line-height: 3.125rem;
+  text-align: center;
+  margin: auto;
+}
 
+.listing-page .booklist-carousel{
+  height: unset;
+}
+
+.listing-page .book-item{
+  width: 19%;
+  height: auto;
+  background: white;
+  border-radius: 4px;
+  box-shadow: 0 0 2px 0 #ccc;
+  padding: 1rem;
+}
+
+.listing-page{
+  background: #F0F3F5;
 }
 
 
@@ -224,14 +249,15 @@ a{
 }
 
 .listing-banner{
-  width: 1200px;
-  display: flex;
-  justify-content: center;
+  max-width: 1200px;
+  height: 300px;
+
+  margin: auto;
+
 }
 
-.listing-banner-carousel{
-  width: 100%;
-  height: 100%;
+.listing-banner img{
+  margin: auto;
 }
 
 
@@ -276,6 +302,7 @@ a{
   width: 100%;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 16px;
 }
 
 .book-item{
@@ -287,13 +314,20 @@ a{
 
 .view_type{
   display: flex;
+  align-items: center;
+  color: #777;
 }
 
 .view_type li {
-    width: 22px;
-    height: 18px;
-    vertical-align: middle;
-    background: url(https://jci.book.com.tw/css/books/product/images/sp_type02_icon1.png) no-repeat -800px -1050px;
+  margin-left: 8px;
+  width: 22px;
+  height: 18px;
+  vertical-align: middle;
+  background: url(https://jci.book.com.tw/css/books/product/images/sp_type02_icon1.png) no-repeat -800px -1050px;
+}
+
+.sortselect{
+  color: #777;
 }
 
 .book-item .img-block{
@@ -384,11 +418,6 @@ a{
 .carousel-inner{
   height: 100%;
 }
-
-/* .carousel-item {
-  width: 20%;
-  float: left;
-} */
 
 .detail-page .main-body{
   height: 650px;
@@ -704,6 +733,24 @@ footer .container-fluid{
   position: fixed;
 }
 
+.back-to-top{
+  cursor: pointer;
+  width: 180px;
+  height: 50px;
+  padding-top: 5px;
+  text-align: center;
+  position: relative;
+  background: #B29B15;
+}
+
+.back-to-top span {
+  color: white;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+}
+
 .sidebar-wrapper .tab{
   min-height: 2.5rem;
   width: 180px;
@@ -923,7 +970,7 @@ footer .container-fluid{
 @media (max-width: 1200px){
 
 .container-fluid {
-    width: calc(100vw - 32px)
+  width: calc(100vw - 32px)
 }
 
 .header-search-input{
@@ -946,6 +993,7 @@ footer .container-fluid{
 
 .detail-page .main-body{
   flex-direction: column;
+  height: unset;
 }
 
 .swiper{
@@ -981,10 +1029,14 @@ footer .container-fluid{
   margin-bottom: 24px;
 }
 
+.listing-page .book-item{
+  width: 43%;
+}
+
 .book-item img{
   height: 410px;
   -o-object-fit: cover;
-    object-fit: cover;
+  object-fit: cover;
 }
 
 .main-body .right-side{
@@ -1002,14 +1054,6 @@ footer .container-fluid{
   justify-content: center;
   
 }
-
-/* .carousel-control-next {
-  right: -6px;
-}
-
-.carousel-control-prev{
-  left: 7px;
-} */
 
 .yt-block,.yt-block iframe{
   width: 100%;
@@ -1119,7 +1163,7 @@ footer .container-fluid{
 } 
 
 .book-item {
-    width: 42%;
+  width: 42%;
 }
 
 }

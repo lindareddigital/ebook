@@ -16,6 +16,10 @@
         <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <link href="./css/all.css" rel="stylesheet">
+<!-- 
+         <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
+          <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
+          <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script> -->
 
  
         <script src="./js/main.js"></script>
@@ -24,7 +28,7 @@
 
     <body class="home-page">
 
-      <!-- <div class="sidebar-wrapper scroll-cling-top">
+      <div class="sidebar-wrapper scroll-cling-top">
         <div class="scroll-active"><div id="sidebar-menu-3-0" class="d-none d-lg-flex tab">
           <a aria-current="page" href="" class="router-link-active router-link-exact-active">
             <span>【益智桌遊】10/31上市</span>
@@ -49,7 +53,7 @@
         <div onclick="topFunction()" class="d-none d-lg-flex back-to-top">
           <span>返回頂端</span>
         </div>
-      </div> -->
+      </div>
 
 
       <div class="sidebtn-container">
@@ -302,6 +306,10 @@
             <!-- <div class="render"></div> -->
 
 
+            <div id="root"></div>
+
+
+
 
             <div class="dvSlider">
                 <!-- Slider main container -->
@@ -503,6 +511,8 @@
 
 
 
+
+
         <ul class="social-links">
           <li><a href=""><img src="https://jci.book.com.tw/css/header/images/social-books-app.svg"><br>誠品</a></li>
           <li><a href=""><img src="https://jci.book.com.tw/css/header/images/social-ebooks-app.svg"><br>博客來</a></li>
@@ -576,6 +586,44 @@
 
 
 <script type="text/babel">
+class MyComponent extends React.Component {
+  render() {
+    const data = []; // 你的資料
+    const listItems = [];
+
+    data.forEach(item => {
+      const arr = [];
+      item.children.forEach((item, index) => {
+        arr.push(<li key={index}><a className="dropdown-item" href={item.path}>{item.description}</a></li>);
+      });
+
+      listItems.push(
+        <div class="dropdown">
+          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            Dropdown button
+          </button>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="#">Action</a></li>
+            <li><a class="dropdown-item" href="#">Another action</a></li>
+            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          </ul>
+        </div>
+      );
+    });
+
+    return (
+      <div>
+        {listItems}
+      </div>
+    );
+  }
+}
+
+ReactDOM.render(<MyComponent />, document.getElementById('root'));
+</script>
+
+
+<script type="text/babel">
 
   fetch('js/categories_book.json')
   .then(response => response.json())
@@ -610,19 +658,23 @@
               <div class="dropdown">
                 <a href="" class="link dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">{item.description}</a>
                 <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                  {arr}
+                  <div class="dropdown">
+                    {arr}
+
+                    <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </div>
                 </ul>
               </div>
-            );
-
-           
+            );          
 
           });
 
 
           console.log(listItems,'listItems');
-
-
 
 
           data.forEach((item, index) => {
