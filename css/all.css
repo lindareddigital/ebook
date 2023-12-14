@@ -359,9 +359,8 @@ a{
 }
 
 .swiper-button-prev, .swiper-button-next{
-    height: 4rem;
-    width: 2rem;
-    transform: translateY(-1.5rem);
+    height: 30px;
+    width: 27px;
     background-color: rgba(0,0,0,.2);
     opacity: .8;
     transition: .2s;
