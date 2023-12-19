@@ -227,6 +227,8 @@
               </li>
             </ul>
 
+
+
               <div class="accordion" id="accordionExample">
               <div class="accordion-item">
               <h2 class="accordion-header" id="headingOne">
@@ -305,16 +307,15 @@
 
 
 
+            <div class="test"></div>
 
+           
 
             <div class="dvSlider">
-                <!-- Slider main container -->
                 <div class="swiper swiper-js booklist-carousel">
-                  <!-- Additional required wrapper -->
                   <div class="title">X萬獸探險隊</div>
                   <hr>
                   <div class="swiper-wrapper booklist-carousel-inner">
-                      <!-- Slides -->
                       <div class="swiper-slide">
                         <div href="detail.html" class="book-item">
                           <img src="https://s2.eslite.dev/unsafe/s.eslite.dev/b2b/newItem/2023/10/12/155_143447327_126_mainCoverImage1.jpg" class="" alt="...">
@@ -352,13 +353,25 @@
                           <div class="desc mt-2">X萬獸探險隊益智桌遊/ 算數王之戰</div>
                           <div class="price-num"> $ 300</div>
                         </div>
-
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="book-item">
+                          <img src="https://s2.eslite.dev/unsafe/s.eslite.dev/b2b/newItem/2023/10/12/155_143447327_126_mainCoverImage1.jpg" class="" alt="...">
+                          <div class="desc mt-2">X萬獸探險隊益智桌遊/ 算數王之戰</div>
+                          <div class="price-num"> $ 300</div>
+                        </div>
+                      </div>
+                      <div class="swiper-slide">
+                        <div class="book-item">
+                          <img src="https://s2.eslite.dev/unsafe/s.eslite.dev/b2b/newItem/2023/10/12/155_143447327_126_mainCoverImage1.jpg" class="" alt="...">
+                          <div class="desc mt-2">X萬獸探險隊益智桌遊/ 算數王之戰</div>
+                          <div class="price-num"> $ 300</div>
+                        </div>
                       </div>
                       
                       
                   </div>
                 
-                  <!-- If we need navigation buttons -->
                   <div class="swiper-button-prev"></div>
                   <div class="swiper-button-next"></div>
                 </div>
@@ -566,40 +579,164 @@
 
 
 <script type="text/babel">
-class MyComponent extends React.Component {
-  render() {
-    const data = [];
-    const listItems = [];
+class BooksList extends React.Component {
 
-    data.forEach(item => {
-      const arr = [];
-      item.children.forEach((item, index) => {
-        arr.push(<li key={index}><a className="dropdown-item" href={item.path}>{item.description}</a></li>);
+  constructor(props) {
+    super(props);
+    this.state = {
+      items: [],
+      categories: []
+    };
+   
+  }
+
+  componentDidMount() {
+    fetch('http://localhost:8055/items/Book')
+      .then(response => response.json())
+      .then(data => {
+        this.setState({ items: data.data });
+      })
+      .catch(function(err) {
+        console.log("Fetch error occurred.", err);
       });
 
-      listItems.push(
-        <div class="dropdown">
-          <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-            Dropdown button
-          </button>
-          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
+      fetch('http://localhost:8055/items/Book?fields=Category.*')
+      .then(response => response.json())
+      .then(data => {
+        this.setState({ categories: data.data });
+      })
+      .catch(function(err) {
+        console.log("Fetch error occurred.", err);
+      });
+
+       const Swiper = window.Swiper;
+      new Swiper(".swiper-js", {
+        loop: true,
+        slidesPerView: 5,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+  }
+
+  render() {
+
+
+    const tabs = this.state.categories.map((item, index) => {
+            console.log('li', item.Category.Title)
+
+      fetch(`http://localhost:8055/items/Book?filter[Category][Title]=${item.Category.Title}`)
+        .then(response => response.json())  
+        .then(data => {
+          this.setState({ li: data.data });
+
+          console.log('77', data.data)
+
+
+          let li = data.data
+
+
+          const listItems = li.map((item, index) => (
+            
+            <div key={index} className="swiper-slide">
+              <div class="book-item">
+                <img src={`http://localhost:8055/assets/${item.PrimaryImage}`} className="" alt={item.title} />
+                <div className="desc mt-2">{item.Title}</div>
+                <div className="price-num">{item.Price}</div>
+              </div>
+            </div>
+          ));
+          
+        })  
+
+      return (
+        <div class="swiper swiper-js booklist-carousel swiper-initialized swiper-horizontal swiper-android">
+        <hr></hr>
+        <div key={index} className="title">{item.Category.Title}</div>
+        <div class="swiper-wrapper booklist-carousel-inner">
+          {listItems}
+        </div> 
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+      </div>
+      );
+    });
+    
+    
+
+    const listItems = this.state.items.map((item, index) => (
+      <div key={index} className="swiper-slide">
+        <div class="book-item">
+          <img src={`http://localhost:8055/assets/${item.PrimaryImage}`} className="" alt={item.title} />
+          <div className="desc mt-2">{item.Title}</div>
+          <div className="price-num">{item.Price}</div>
         </div>
+      </div>
+    ));
+
+    const categories = this.state.categories.map((item, index) => {
+      return (
+        <div key={index} className="title">{item.Category.Title}</div>
       );
     });
 
-    return (
+
+    return (  
       <div>
-        {listItems}
+        {tabs}     
       </div>
+    );
+  
+    
+  }
+}
+
+ReactDOM.render(<BooksList/>,  document.querySelector('.test'));
+// ReactDOM.render(<BooksList/>,  document.querySelector('.booklist-carousel-inner'));
+
+
+
+class MyList extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      categories: []
+    };
+   
+  }
+
+  componentDidMount() {
+
+      fetch('http://localhost:8055/items/Book?fields=Category.*')
+      .then(response => response.json())
+      .then(data => {
+        this.setState({ categories: data.data });
+      })
+      .catch(function(err) {
+        console.log("Fetch error occurred.", err);
+      });
+
+  }
+
+  
+  render() {
+
+    return (
+      <ul>
+        {this.state.categories.map((item, index) => (
+          <li key={index}>
+            <a href="">{item.Category.Title}</a>
+          </li>
+        ))}
+      </ul>
     );
   }
 }
 
-ReactDOM.render(<MyComponent />, document.getElementById('root'));
+ReactDOM.render(<MyList/>,  document.querySelector('.list-aside'));
+
+
 </script>
 
 
@@ -612,8 +749,6 @@ ReactDOM.render(<MyComponent />, document.getElementById('root'));
     const listItems = [];
 
     data.forEach(item => {
-
-    console.log(item.description);
 
 
       fetch('js/categories_book.json')
@@ -630,8 +765,6 @@ ReactDOM.render(<MyComponent />, document.getElementById('root'));
               arr.push(<li key={index}><a class="dropdown-item" href={item.path}>{item.description}</a></li>)
             })
 
-            console.log(arr,'arr');
-
             listItems.push(
               <div class="dropdown">
                 <a href="" class="link dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">{item.description}</a>
@@ -643,10 +776,6 @@ ReactDOM.render(<MyComponent />, document.getElementById('root'));
               </div>
             );          
           });
-
-
-          console.log(listItems,'listItems');
-
 
           data.forEach((item, index) => {
             
@@ -663,8 +792,13 @@ ReactDOM.render(<MyComponent />, document.getElementById('root'));
         .catch(error => console.error('Error:', error));
 
     });
+
+
+
+
   
   })
+
 
 </script>
 
