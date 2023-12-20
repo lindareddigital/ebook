@@ -8,7 +8,7 @@
         <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
         <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script> -->
         <!-- 引入 React 和 ReactDOM -->
         <script src="https://unpkg.com/react@17/umd/react.development.js"></script>
         <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js"></script>
@@ -591,8 +591,20 @@ class BooksList extends React.Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost:8055/items/Book')
-      .then(response => response.json())
+    fetch('http://localhost:8055/items/Book', {
+        mode: 'no-cors',
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+          'Content-Type': 'application/json'
+        }
+      })
+      .then(response => 
+      {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.text().then(text => text ? JSON.parse(text) : {})
+      })
       .then(data => {
         this.setState({ items: data.data });
       })
@@ -600,8 +612,19 @@ class BooksList extends React.Component {
         console.log("Fetch error occurred.", err);
       });
 
-      fetch('http://localhost:8055/items/Book?fields=Category.*')
-      .then(response => response.json())
+      fetch('http://localhost:8055/items/Book?fields=Category.*', {
+        mode: 'no-cors',
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+          'Content-Type': 'application/json'
+        }
+      })
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.text().then(text => text ? JSON.parse(text) : {})
+      })
       .then(data => {
         this.setState({ categories: data.data });
       })
@@ -609,7 +632,7 @@ class BooksList extends React.Component {
         console.log("Fetch error occurred.", err);
       });
 
-       const Swiper = window.Swiper;
+      const Swiper = window.Swiper;
       new Swiper(".swiper-js", {
         loop: true,
         slidesPerView: 5,
@@ -624,14 +647,25 @@ class BooksList extends React.Component {
 
 
     const tabs = this.state.categories.map((item, index) => {
-            console.log('li', item.Category.Title)
+      console.log('li', item.Category.Title)
 
-      fetch(`http://localhost:8055/items/Book?filter[Category][Title]=${item.Category.Title}`)
-        .then(response => response.json())  
+      fetch(`http://localhost:8055/items/Book?filter[Category][Title]=${item.Category.Title}`, {
+        mode: 'no-cors',
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+          'Content-Type': 'application/json'
+        }
+      })
+        .then(response => {
+            if (!response.ok) {
+              throw new Error('Network response was not ok');
+            }
+            return response.text().then(text => text ? JSON.parse(text) : {})
+          })  
         .then(data => {
           this.setState({ li: data.data });
 
-          console.log('77', data.data)
+          // console.log('77', data.data)
 
 
           let li = data.data
@@ -647,10 +681,16 @@ class BooksList extends React.Component {
               </div>
             </div>
           ));
+
+
+          // console.log('77', listItems)
+
           
         })  
 
       return (
+
+        
         <div class="swiper swiper-js booklist-carousel swiper-initialized swiper-horizontal swiper-android">
         <hr></hr>
         <div key={index} className="title">{item.Category.Title}</div>
@@ -707,16 +747,25 @@ class MyList extends React.Component {
   }
 
   componentDidMount() {
-
-      fetch('http://localhost:8055/items/Book?fields=Category.*')
-      .then(response => response.json())
-      .then(data => {
-        this.setState({ categories: data.data });
-      })
-      .catch(function(err) {
-        console.log("Fetch error occurred.", err);
-      });
-
+    fetch('http://localhost:8055/items/Book?fields=Category.*', {
+      mode: 'no-cors',
+      headers: {
+        'Access-Control-Allow-Origin': '*',
+        'Content-Type': 'application/json'
+      }
+    })
+    .then(response => {
+      if (!response.ok) {
+        throw new Error('Network response was not ok');
+      }
+      return response.text().then(text => text ? JSON.parse(text) : {})
+    })
+    .then(data => {
+      this.setState({ categories: data.data });
+    })
+    .catch(function(err) {
+      console.log("Fetch error occurred.", err);
+    });
   }
 
   
@@ -743,7 +792,12 @@ ReactDOM.render(<MyList/>,  document.querySelector('.list-aside'));
 <script type="text/babel">
 
   fetch('js/categories_book.json')
-  .then(response => response.json())
+  .then(response => {
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    return response.text().then(text => text ? JSON.parse(text) : {})
+  })
   .then(data => {
 
     const listItems = [];
@@ -751,45 +805,49 @@ ReactDOM.render(<MyList/>,  document.querySelector('.list-aside'));
     data.forEach(item => {
 
 
-      fetch('js/categories_book.json')
-        .then(response => response.json())
-        .then(data => {
+    fetch('js/categories_book.json')
+      .then(response => {
+          if (!response.ok) {
+            throw new Error('Network response was not ok');
+          }
+          return response.text().then(text => text ? JSON.parse(text) : {})
+      })
+      .then(data => {
 
-          const listItems = [];
-          const bookList = [];
+        const listItems = [];
+        const bookList = [];
 
+        data.forEach(item => {
+          const arr = []
+          item.children.forEach((item, index) => {              
+            arr.push(<li key={index}><a class="dropdown-item" href={item.path}>{item.description}</a></li>)
+          })
 
-          data.forEach(item => {
-            const arr = []
-            item.children.forEach((item, index) => {              
-              arr.push(<li key={index}><a class="dropdown-item" href={item.path}>{item.description}</a></li>)
-            })
+          listItems.push(
+            <div class="dropdown">
+              <a href="" class="link dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">{item.description}</a>
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <div class="dropdown">
+                  {arr}
+                </div>
+              </ul>
+            </div>
+          );          
+        });
 
-            listItems.push(
-              <div class="dropdown">
-                <a href="" class="link dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">{item.description}</a>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                  <div class="dropdown">
-                    {arr}
-                  </div>
-                </ul>
-              </div>
-            );          
-          });
+        data.forEach((item, index) => {
+          
+          bookList.push(
+            <div key={index} class="title"><a class="" href={item.path}>{item.path}</a></div>
+        );
 
-          data.forEach((item, index) => {
-            
-            bookList.push(
-              <div key={index} class="title"><a class="" href={item.path}>{item.path}</a></div>
-          );
+        });
 
-          });
+        ReactDOM.render(listItems, document.querySelector('.menu-bar'));
+        ReactDOM.render(bookList, document.querySelector('.render'));
 
-          ReactDOM.render(listItems, document.querySelector('.menu-bar'));
-          ReactDOM.render(bookList, document.querySelector('.render'));
-
-        })
-        .catch(error => console.error('Error:', error));
+      })
+      .catch(error => console.error('Error:', error));
 
     });
 
